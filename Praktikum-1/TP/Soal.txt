@@ -1,0 +1,5 @@
+1. Buatlah program untuk menghitung sisi miring dan keliling segitiga siku-siku.
+
+2. Buatlah program untuk menghitung nilai rata-rata dari mata kuliah pemrograman terstruktur, dengan ketentuan sebagai berikut : Nilai praktikum 40 % Nilai teori 40 % Nilai tugas dan final project 20 %
+
+3. Buatlah program untuk mengetahui cicilan, total harga cicilan dan keuntungan dealer dari pembelian sepeda
