@@ -113,3 +113,15 @@ int main(){
     }
     system("pause");
 }
+
+// login berhasil
+// password 
+// password dan email 
+// password dan username
+// email 
+// email dan password 
+// email dan username 
+// username 
+// username  dan password
+// username dan email
+// username , email dan password salah 
