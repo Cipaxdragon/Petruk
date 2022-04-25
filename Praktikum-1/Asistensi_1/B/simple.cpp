@@ -1,14 +1,23 @@
 #include <iostream>
 using namespace std;
-string username,password,email;
-int saldo = 45; // 2 digit nim terakhir
+string username = "ghazali";
+string email    = "ghazali@gmail.com";
+string password = "neneksalto";
+int saldo = 64; // 2 digit nim terakhir
 bool logot;
-void registrasi(){
-    cout << "Registrasi" << endl;
-    cout << "Username => " ; cin >> username;
-    cout << "Email    => " ; cin >> email;
-    cout << "Password => " ; cin >> password;
-    cout << "Registrasi Selesai" << endl;
+void autentikasi(){
+    string a,b,c;
+    cout << "Autentikasi Akun Atm!" << endl;
+    while(true){
+        cout << "Username => " ; cin >> a;
+        cout << "Email    => " ; cin >> b;
+        cout << "Password => " ; cin >> c;
+        if(a == username and b == email and c == password){
+            cout << "Autentikasi Berhasil" << endl;
+            break;
+        } 
+        cout << "Username, Email atau Password tidak sesuai" << endl;
+    }
 }
 void gantipw(){
     string gantipw,a;
@@ -67,7 +76,7 @@ void menu(){
 }
 int main(){
     logot = false;
-    registrasi();
+    autentikasi();
     cout << endl;
     while(logot == false){
         menu();
