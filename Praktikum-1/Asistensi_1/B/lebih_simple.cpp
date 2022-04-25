@@ -9,12 +9,10 @@ string ulang;
 	
 int main (){
 	cout << "PROGRAM AUTENTIKASI" << endl;
-	cout << "Nama : Alyah Ananda Masri" << endl;
-	cout << "NIM  : 60900121066" << endl;
-	
-	string namapengguna = "alyah";
-	string emailanda 	= "anandalyah26@gmail.com";
-	string katasandi = "bismillah123";
+
+	string namapengguna = "rando";
+	string emailanda 	= "rando@gmail.com";
+	string katasandi = "rando123";
 	int saldo		= 66;
 	while(true){
 		cout << "masukkan username anda : ";
