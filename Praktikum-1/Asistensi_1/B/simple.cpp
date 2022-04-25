@@ -22,8 +22,7 @@ void autentikasi(){
 void gantipw(){
     string gantipw,a;
     cout << "Ganti PW" << endl;
-    cout << "[Input Password Baru]==> " ; cin >> gantipw;
-    password = gantipw;
+    cout << "[Input Password Baru]==> " ; cin >> password;
     cout << "Password Berhasil diperbaharui" << endl;
 }
 void tambahsaldo(){
