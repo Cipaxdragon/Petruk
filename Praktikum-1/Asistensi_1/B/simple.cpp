@@ -5,6 +5,26 @@ string email    = "2";
 string password = "3";
 int saldo = 64; // 2 digit nim terakhir
 bool logot;
+
+void autentikasi();
+void gantipw();
+void tambahsaldo();
+void lihatsaldo();
+void lihatsaldo();
+void logout();
+void menu();
+
+int main(){
+    logot = false;
+    autentikasi();
+    cout << endl;
+    while(logot == false){
+        menu();
+        cout << endl;
+        if(logot == true) break;
+    }
+    system("pause");
+}
 void autentikasi(){
     string a,b,c;
     cout << "Autentikasi Akun Atm!" << endl;
@@ -102,26 +122,3 @@ void menu(){
             break;            
     }
 }
-int main(){
-    logot = false;
-    autentikasi();
-    cout << endl;
-    while(logot == false){
-        menu();
-        cout << endl;
-        if(logot == true) break;
-    }
-    system("pause");
-}
-
-// login berhasil
-// password 
-// password dan email 
-// password dan username
-// email 
-// email dan password 
-// email dan username 
-// username 
-// username  dan password
-// username dan email
-// username , email dan password salah 
