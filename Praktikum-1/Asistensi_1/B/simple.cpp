@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
-string username = "ghazali";
-string email    = "ghazali@gmail.com";
-string password = "neneksalto";
+string username = "1";
+string email    = "2";
+string password = "3";
 int saldo = 64; // 2 digit nim terakhir
 bool logot;
 void autentikasi(){
@@ -13,10 +13,39 @@ void autentikasi(){
         cout << "Email    => " ; cin >> b;
         cout << "Password => " ; cin >> c;
         if(a == username and b == email and c == password){
-            cout << "Autentikasi Berhasil" << endl;
+            cout << "Login Berhasil" << endl;
             break;
-        } 
-        cout << "Username, Email atau Password tidak sesuai" << endl;
+        }
+        else if(a == username and b == email and c != password){
+            cout << "Password Salah" << endl;
+        }
+        else if(a == username and b != email and c != password){
+            cout << "Password dan email salah" << endl;
+        }
+        else if(a != username and b == email and c != password){
+            cout << "Password dan username salah" << endl;
+        }
+        else if(a == username and b != email and c == password){
+            cout << "Email salah" << endl;
+        }
+        else if(a == username and b != email and c != password){
+            cout << "Email dan password salah" << endl;
+        }
+        else if(a != username and b != email and c == password){
+            cout << "Email dan username salah" << endl;
+        }
+        else if(a == username and b == email and c == password){
+            cout << "Username salah" << endl;
+        }
+        else if(a == username and b == email and c == password){
+            cout << "Username dan password salah" << endl;
+        }
+        else if(a != username and b != email and c == password){
+            cout << "Username dan email salah" << endl;
+        }   
+        else{
+            cout << "Username, Email dan Password salah" << endl;
+        }
     }
 }
 void gantipw(){
