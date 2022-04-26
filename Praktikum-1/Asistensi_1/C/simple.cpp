@@ -57,7 +57,7 @@ void autentikasi(){
         else if(a == username and b == email and c == password){
             cout << "Username salah" << endl;
         }
-        else if(a == username and b == email and c == password){
+        else if(a != username and b == email and c != password){
             cout << "Username dan password salah" << endl;
         }
         else if(a != username and b != email and c == password){
