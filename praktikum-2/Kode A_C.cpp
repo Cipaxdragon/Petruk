@@ -3,8 +3,8 @@
 #include <conio.h>
 using namespace std;
 
-string username = "pani";
-string password = "pani123";
+string username = "nama";
+string password = "nama123";
 bool gagal = false;
 
 string kategori[3]={
@@ -26,14 +26,15 @@ void data();
     int harga;
 
 int main(){
+    // barang kategori 1
     barang[0][0] = "Chicken Katsu"; price[0][0] = 10000;
     barang[0][1] = "Kimbab"; price[0][1] = 10000;
     barang[0][2] = "Toppoki"; price[0][2] = 10000;
-
+    // barang kategori 2
     barang[1][0] = "Susi"; price[1][1] = 10000;
     barang[1][1] = "Ramen"; price[1][2] = 10000;
     barang[1][2] = "Onigiri"; price[1][3] = 10000;
-
+    // barang kategori 1
     barang[2][0] = "Nasi Goreng"; price[2][0] = 10000;
     barang[2][1] = "Mie Goreng"; price[2][1] = 10000;
     barang[2][2] = "Soto"; price[2][2] = 10000;
