@@ -8,7 +8,7 @@ int kesempatan = 3;
 string username = "qila";
 string password = "qila123";
 
-string barangpembeli,kategoripembeli,hargabarangpembeli;
+string bukupembeli,kategoripembeli,hargabukupembeli;
 int bayar,kembalian;
 
 string kategori[3] = {
@@ -69,12 +69,17 @@ void login(){
     while(kesempatan != 0){
         cout << "[username] => "; cin >> u; 
         cout << "[password] => ";
-        ch = _getch();
-        while(ch != 13){
-            p.push_back(ch);
+        while(true){
             ch = _getch();
-            cout << '*';
+        if(ch == 13){
+            break;
+        }else if(ch == '\b'){
+            p.pop_back();
+        }else{
+            p.push_back(ch);
+            cout << "*";
         }
+    }
         cout << endl;
         if(u == username and p == password){
             cout << "Login berhasil" << endl;
@@ -141,8 +146,8 @@ void menu(){
                 cout << "Cuma A,B,C" << endl;
             }
             kategoripembeli =  kategori[0];
-            barangpembeli =  buku[a][b];
-            hargabarangpembeli = harga[a][b];
+            bukupembeli =  buku[a][b];
+            hargabukupembeli = harga[a][b];
             cout << "Buku "<< buku[a][b] << " berhasil di beli" << endl; 
             break;
         case 'B':    
@@ -168,8 +173,8 @@ void menu(){
                 cout << "Cuma A,B,C" << endl;
             }
             kategoripembeli =  kategori[0];
-            barangpembeli =  buku[a][b];
-            hargabarangpembeli = harga[a][b];
+            bukupembeli =  buku[a][b];
+            hargabukupembeli = harga[a][b];
             cout << "Buku "<< buku[a][b] << " berhasil di beli" << endl; 
             break;
         case 'C':    
@@ -195,8 +200,8 @@ void menu(){
                 cout << "Cuma A,B,C" << endl;
             }
             kategoripembeli =  kategori[0];
-            barangpembeli =  buku[a][b];
-            hargabarangpembeli = harga[a][b];
+            bukupembeli =  buku[a][b];
+            hargabukupembeli = harga[a][b];
             cout << "Buku "<< buku[a][b] << " berhasil di beli" << endl; 
             break;
         default:
@@ -210,13 +215,13 @@ void menu(){
 
 void tampilkan(){
     int hargaa;
-    hargaa = stoi(hargabarangpembeli);
+    hargaa = stoi(hargabukupembeli);
     cout << "-- Info Pembelian --" << endl;
     cout << "Nama Toko    : " << toko <<endl;
     cout << "Nama Kasir   : " << kasir << endl;
-    cout << "Nama Barang  : " << barangpembeli << endl;
+    cout << "Nama Barang  : " << bukupembeli << endl;
     cout << "Kategori     : " << kategoripembeli << endl;
-    cout << "Harga Barang : " << hargabarangpembeli << endl;
+    cout << "Harga Barang : " << hargabukupembeli << endl;
     cout << "Uang         : " << bayar << endl;
     kembalian = bayar - hargaa;
     cout << "Kembalian    : " << kembalian << endl;
