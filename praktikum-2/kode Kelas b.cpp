@@ -5,18 +5,18 @@ using namespace std;
 
 int kesempatan = 3;
 
-string username = "qila";
-string password = "qila123";
+string username = "nama";
+string password = "nama123";
 
 string barangpembeli,kategoripembeli,hargabarangpembeli;
 int bayar,kembalian;
 
 string kategori[3] = {
-    "Buku Fiksi",
-    "Buku Masakan",
-    "Buku Sejarah",
+    "Barang  Fiksi",
+    "Barang  Masakan",
+    "Barang  Sejarah",
 };
-string buku [3][3];
+string barang [3][3];
 string harga[3][3];
 
 string toko;
@@ -30,17 +30,17 @@ bool keluar = false;
 
 int main(){
 
-    buku[0][0] = "Sang Pemimpi";
-    buku[0][1] = "Si kancil";
-    buku[0][2] = "Sangkuriang";
+    barang[0][0] = "Sang Pemimpi";
+    barang[0][1] = "Si kancil";
+    barang[0][2] = "Sangkuriang";
 
-    buku[1][0] = "Kue kering";
-    buku[1][1] = "Resep Aneka Nasi Goreng";
-    buku[1][2] = "Kue basah";
+    barang[1][0] = "Kue kering";
+    barang[1][1] = "Resep Aneka Nasi Goreng";
+    barang[1][2] = "Kue basah";
 
-    buku[2][0] = "Sejarah indonesia";
-    buku[2][1] = "Sejarah kerajaan besar";
-    buku[2][2] = "Sejarah sumatra";
+    barang[2][0] = "Sejarah indonesia";
+    barang[2][1] = "Sejarah kerajaan besar";
+    barang[2][2] = "Sejarah sumatra";
 
     harga[0][0] = "20000";
     harga[0][1] = "30000";
@@ -110,7 +110,7 @@ void gantisandi(){
 }
 void menu(){
     char pilih,pilih2;
-    cout << "-- Toko buku --" << endl;
+    cout << "-- Toko Barang  --" << endl;
     cout << "- Kategori" << endl;
     cout << "A. "<< kategori[0] << endl;
     cout << "B. "<< kategori[1] << endl;
@@ -121,9 +121,9 @@ void menu(){
     switch (pilih){
         case 'A':    
             cout << kategori[0] << endl;
-            cout << "A. "<<  buku[0][0] << endl;
-            cout << "B. "<<  buku[0][1] << endl;
-            cout << "C. "<<  buku[0][2] << endl;
+            cout << "A. "<<  barang[0][0] << endl;
+            cout << "B. "<<  barang[0][1] << endl;
+            cout << "C. "<<  barang[0][2] << endl;
             cout << "[A-C] ==> "; cin >> pilih2;
             pilih2 = toupper(pilih2);
             if(pilih2 == 'A'){
@@ -141,15 +141,15 @@ void menu(){
                 cout << "Cuma A,B,C" << endl;
             }
             kategoripembeli =  kategori[0];
-            barangpembeli =  buku[a][b];
+            barangpembeli =  barang[a][b];
             hargabarangpembeli = harga[a][b];
-            cout << "Buku "<< buku[a][b] << " berhasil di beli" << endl; 
+            cout << "Barang  "<< barang[a][b] << " berhasil di beli" << endl; 
             break;
         case 'B':    
             cout << kategori[1] << endl;
-            cout << "A. "<<  buku[1][0] << endl;
-            cout << "B. "<<  buku[1][1] << endl;
-            cout << "C. "<<  buku[1][2] << endl;
+            cout << "A. "<<  barang[1][0] << endl;
+            cout << "B. "<<  barang[1][1] << endl;
+            cout << "C. "<<  barang[1][2] << endl;
             cout << "[A-C] ==> "; cin >> pilih2;
             pilih2 = toupper(pilih2);
 
@@ -168,15 +168,15 @@ void menu(){
                 cout << "Cuma A,B,C" << endl;
             }
             kategoripembeli =  kategori[0];
-            barangpembeli =  buku[a][b];
+            barangpembeli =  barang[a][b];
             hargabarangpembeli = harga[a][b];
-            cout << "Buku "<< buku[a][b] << " berhasil di beli" << endl; 
+            cout << "Barang  "<< barang[a][b] << " berhasil di beli" << endl; 
             break;
         case 'C':    
             cout << kategori[2] << endl;
-            cout << "A. "<<  buku[2][0] << endl;
-            cout << "B. "<<  buku[2][1] << endl;
-            cout << "C. "<<  buku[2][2] << endl;
+            cout << "A. "<<  barang[2][0] << endl;
+            cout << "B. "<<  barang[2][1] << endl;
+            cout << "C. "<<  barang[2][2] << endl;
             cout << "[A-C] ==> "; cin >> pilih2;
             pilih2 = toupper(pilih2);
 
@@ -195,9 +195,9 @@ void menu(){
                 cout << "Cuma A,B,C" << endl;
             }
             kategoripembeli =  kategori[0];
-            barangpembeli =  buku[a][b];
+            barangpembeli =  barang[a][b];
             hargabarangpembeli = harga[a][b];
-            cout << "Buku "<< buku[a][b] << " berhasil di beli" << endl; 
+            cout << "Barang  "<< barang[a][b] << " berhasil di beli" << endl; 
             break;
         default:
             cout << "Pilihan cuma A-C" << endl;
