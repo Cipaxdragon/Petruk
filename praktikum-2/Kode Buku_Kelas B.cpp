@@ -25,22 +25,23 @@ void tampilkan();
 void login();
 void gantisandi();
 void menu();
+void item();
 
 bool keluar = false;
 
 int main(){
 
-    buku[0][0] = "Sang Pemimpi";
-    buku[0][1] = "Si kancil";
+    buku[0][0] = "Sang_Pemimpi";
+    buku[0][1] = "Si_kancil";
     buku[0][2] = "Sangkuriang";
 
-    buku[1][0] = "Kue kering";
-    buku[1][1] = "Resep Aneka Nasi Goreng";
-    buku[1][2] = "Kue basah";
+    buku[1][0] = "Kue_kering";
+    buku[1][1] = "Resep_Nasi_Goreng";
+    buku[1][2] = "Kue_basah";
 
-    buku[2][0] = "Sejarah indonesia";
-    buku[2][1] = "Sejarah kerajaan besar";
-    buku[2][2] = "Sejarah sumatra";
+    buku[2][0] = "Sejarah_indonesia";
+    buku[2][1] = "Sejarah_kerajaan_besar";
+    buku[2][2] = "Sejarah_sumatra";
 
     harga[0][0] = "20000";
     harga[0][1] = "30000";
@@ -105,7 +106,7 @@ void login(){
 void gantisandi(){
     char yn;
     cout << "Kesempatan habis" << endl;
-    cout << "Mau ganti sandi?[Y ,N] ==> "; cin >> yn;
+    cout << "Mau ganti sandi?[Y/N] ==> "; cin >> yn;
     if(yn == 'y'){
         cout << "[password baru]==> "; cin >> password;
         kesempatan = 3;
@@ -114,7 +115,8 @@ void gantisandi(){
     }
 }
 void menu(){
-    char pilih,pilih2;
+    char pilih;
+    string pilih2;
     cout << "-- Toko buku --" << endl;
     cout << "- Kategori" << endl;
     cout << "A. "<< kategori[0] << endl;
@@ -126,20 +128,20 @@ void menu(){
     switch (pilih){
         case 'A':    
             cout << kategori[0] << endl;
-            cout << "A. "<<  buku[0][0] << endl;
-            cout << "B. "<<  buku[0][1] << endl;
-            cout << "C. "<<  buku[0][2] << endl;
-            cout << "[A-C] ==> "; cin >> pilih2;
-            pilih2 = toupper(pilih2);
-            if(pilih2 == 'A'){
+            cout << "- "<<  buku[0][0] << endl;
+            cout << "- "<<  buku[0][1] << endl;
+            cout << "- "<<  buku[0][2] << endl;
+            cout << "[Nama-Buku] ==> "; cin >> pilih2;
+            // pilih2 = toupper(pilih2);
+            if(pilih2 == buku[0][0]){
                 a = 0;
                 b = 0;
             }
-            else if(pilih2 == 'B'){
+            else if(pilih2 == buku[0][1]){
                 a = 0;
                 b = 1;
             }
-            else if(pilih2 == 'C'){
+            else if(pilih2 == buku[0][1]){
                 a = 0;
                 b = 2;
             }else{
@@ -152,21 +154,21 @@ void menu(){
             break;
         case 'B':    
             cout << kategori[1] << endl;
-            cout << "A. "<<  buku[1][0] << endl;
-            cout << "B. "<<  buku[1][1] << endl;
-            cout << "C. "<<  buku[1][2] << endl;
-            cout << "[A-C] ==> "; cin >> pilih2;
-            pilih2 = toupper(pilih2);
+            cout << "- "<<  buku[1][0] << endl;
+            cout << "- "<<  buku[1][1] << endl;
+            cout << "- "<<  buku[1][2] << endl;
+            cout << "[Nama_Buku] ==> "; cin >> pilih2;
+            // pilih2 = toupper(pilih2);
 
-            if(pilih2 == 'A'){
+            if(pilih2 == buku[1][0]){
                 a = 1;
                 b = 0;
             }
-            else if(pilih2 == 'B'){
+            else if(pilih2 == buku[1][1]){
                 a = 1;
                 b = 1;
             }
-            else if(pilih2 == 'C'){
+            else if(pilih2 == buku[1][2]){
                 a = 1;
                 b = 2;
             }else{
@@ -179,26 +181,28 @@ void menu(){
             break;
         case 'C':    
             cout << kategori[2] << endl;
-            cout << "A. "<<  buku[2][0] << endl;
-            cout << "B. "<<  buku[2][1] << endl;
-            cout << "C. "<<  buku[2][2] << endl;
-            cout << "[A-C] ==> "; cin >> pilih2;
-            pilih2 = toupper(pilih2);
+            cout << "- "<<  buku[2][0] << endl;
+            cout << "- "<<  buku[2][1] << endl;
+            cout << "- "<<  buku[2][2] << endl;
+            cout << "[Nama-Buku] ==> "; cin >> pilih2;
+            // pilih2 = toupper(pilih2);
 
-            if(pilih2 == 'A'){
+            if(pilih2 == buku[2][0]){
                 a = 2;
                 b = 0;
             }
-            else if(pilih2 == 'B'){
+            else if(pilih2 == buku[2][1]){
                 a = 2;
                 b = 1;
             }
-            else if(pilih2 == 'C'){
+            else if(pilih2 == buku[2][2]){
                 a = 2;
                 b = 2;
             }else{
                 cout << "Cuma A,B,C" << endl;
             }
+
+
             kategoripembeli =  kategori[0];
             bukupembeli =  buku[a][b];
             hargabukupembeli = harga[a][b];
@@ -212,6 +216,8 @@ void menu(){
     cout << "Nama Kasir ==> ";cin >> kasir;
     cout << "Bayar ==> "; cin >> bayar;
 }
+
+
 
 void tampilkan(){
     int hargaa;
