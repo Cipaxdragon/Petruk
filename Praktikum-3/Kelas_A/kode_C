@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int baris;
+	cout << "Masukan panjang pola: ";
+	cin >> baris;
+    int i ,j, k;
+    i = 1;
+    do{
+        j =  1; 
+        do{
+            cout << " ";
+            j++;
+        }while(j <= i);
+        k = baris;
+        do{
+            cout << "* ";
+            k--;
+        }while(k >= (2 * i - baris));        
+        cout << endl;
+        i++;
+    }while(i <= baris);
+	cin.get();
+	return 0;
+}
