@@ -7,12 +7,7 @@ int main(){
     cout << "===== Program Segitga ======" << endl;
     cout << "Masukan jumlah baris => "; cin >> baris;
    int i,j;
-    // for(int i = 1;i <= baris;i++){
-    //     for(int j = 1;j <= i;j++){
-    //         cout << "*";
-    //     }
-    //     cout << endl;
-    // }
+
 
     i = 1;
     while(i <= baris){
